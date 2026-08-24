@@ -8,7 +8,9 @@ The output contains no dynamic Next.js routes. It can be hosted by any static HT
 
 ## Vercel
 
-The app is deployed as a static export. `vercel.json` runs `pnpm build`, serves `out/`, keeps `sw.js` revalidatable, and serves the generated Web Worker as JavaScript. There is no required map environment variable.
+The app is deployed as a static export. `vercel.json` runs `pnpm build`, keeps `sw.js` revalidatable, and serves the generated Web Worker as JavaScript. There is no required map environment variable.
+
+Keep the Vercel Framework Preset set to Next.js and do not override Output Directory. Vercel reads Next.js build metadata from `.next` and publishes the static files produced by `output: "export"`; forcing the Output Directory to `out` makes the Next.js adapter look for `routes-manifest.json` in the wrong directory.
 
 Do not commit a real private Remotion key; `NEXT_PUBLIC_REMOTION_LICENSE_KEY` is public by design.
 
