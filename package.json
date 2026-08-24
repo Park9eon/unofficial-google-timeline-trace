@@ -1,0 +1,60 @@
+{
+  "name": "unofficial-google-timeline-trace",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=24 <26"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build && serwist build serwist.config.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit --incremental false",
+    "test": "vitest run",
+    "test:ui": "tsx scripts/verify-ui.ts",
+    "test:render": "tsx scripts/verify-browser-render.ts",
+    "test:sw": "tsx scripts/verify-service-worker.ts",
+    "audit:browser": "tsx scripts/audit-browser-performance.ts",
+    "audit:motion": "tsx scripts/audit-motion.ts",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@remotion/player": "4.0.515",
+    "@remotion/web-renderer": "4.0.515",
+    "@xstate/react": "6.1.0",
+    "d3-interpolate": "3.0.1",
+    "dexie": "4.4.5",
+    "i18next": "26.4.0",
+    "lucide-react": "0.468.0",
+    "maplibre-gl": "5.24.0",
+    "next": "16.3.1",
+    "quick-lru": "7.3.0",
+    "radix-ui": "1.6.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-i18next": "17.0.12",
+    "remotion": "4.0.515",
+    "xstate": "5.32.5",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@serwist/cli": "9.5.12",
+    "@serwist/next": "9.5.12",
+    "@testing-library/react": "16.1.0",
+    "@types/d3-interpolate": "3.0.4",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.3.1",
+    "fake-indexeddb": "6.2.5",
+    "jsdom": "25.0.1",
+    "playwright-core": "1.62.1",
+    "serwist": "9.5.12",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

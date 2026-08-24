@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+.next/
+out/
+coverage/
+.timeline/
+*.tsbuildinfo
+.DS_Store
+.idea/
+.env
+.env.*
+!.env.example
+/history*.json
+/location-history*.json
+public/sw.js
